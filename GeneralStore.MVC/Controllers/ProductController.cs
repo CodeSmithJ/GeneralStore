@@ -39,6 +39,22 @@ namespace GeneralStore.MVC.Controllers
             return View(product);
         }
 
+        // GET: Details
+        // Product/Details/{id}
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Product product = _db.Products.Find(id);
+            if (product == null)
+            {
+                return HttpNotFound();
+            }
+            return View(product);
+        }
+
         // GET: Edit
         // Product/Edit/{id}
         public ActionResult Edit(int? id)
