@@ -5,16 +5,16 @@
 <div class="jumbotron">
     <h1>General Store</h1>
     <p class="lead">General Store is a web app that allows users to check product in the general store.</p>
-    <p><a href="#" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    @Html.ActionLink("Learn More About Us", "About")
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting Started</h2>
+        <h2>Products</h2>
         <p>
-            Click the button link below to add a product
+            Our General Store, located in the farming community of New Jersey, is host to a multitude of farm fresh food and items of distinction.<br/> Come browse our products and see what we have for you.
         </p>
-        <p><a class="btn btn-default" href="#">Add Product &raquo;</a></p>
+        @Html.ActionLink("Check Products", "Index", "Product", null, new { @class = "btn btn-primary btn-large"})
     </div>
     <div class="col-md-4">
         <h2>Get More Information</h2>
